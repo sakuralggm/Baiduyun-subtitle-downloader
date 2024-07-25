@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         百度网盘智能字幕下载
 // @namespace    http://github.com/lihaoze123/Baiduyun-subtitle-downloader
-// @version      0.3
+// @version      0.4
 // @description  自动将百度网盘生成的智能字幕下载为 srt 文件，增加下载按钮
 // @match        *://pan.baidu.com/*
 // @grant        GM_download
@@ -106,5 +106,11 @@
         subtree: true
     };
     observer.observe(document.body, config);
+
+    setInterval(() => {
+        if (!document.querySelector("#vjs_video_594 > section > div.vp-video__control-bar--setup > div:nth-child(1) > div > div.vp-inner-vontainer > div > div.vp-video__control-bar--video-subtitles > div > ul > button")) {
+            addDownloadButton();
+        }
+    }, 1000);
 
 })();
