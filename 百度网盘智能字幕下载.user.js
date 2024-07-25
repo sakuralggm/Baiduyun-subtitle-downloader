@@ -5,6 +5,7 @@
 // @description  自动将百度网盘生成的智能字幕下载为 srt 文件
 // @match        *://pan.baidu.com/*
 // @grant        GM_download
+// @license      GPL3
 // ==/UserScript==
 
 (function() {
