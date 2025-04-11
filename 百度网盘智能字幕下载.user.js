@@ -47,7 +47,7 @@
     }
 
     async function downloadSubtitle() {
-        const button = document.querySelector("#vjs_video_594 > section > div.vp-video__control-bar--setup > div:nth-child(1) > div > div.vp-inner-vontainer > div > div.vp-video__control-bar--video-subtitles > div > ul > li:nth-child(2) > p");
+        const button = document.querySelector("#vjs_video_594 > div > section > div.vp-video__control-bar--setup > div:nth-child(1) > div > div.vp-inner-vontainer > div > div.vp-video__control-bar--video-subtitles > div > ul > li:nth-child(2) > p");
         if (button) {
             clearResources(); // 清理资源
             button.click();
@@ -70,7 +70,7 @@
     }
 
     function addDownloadButton() {
-        const controlBar = document.querySelector("#vjs_video_594 > section > div.vp-video__control-bar--setup > div:nth-child(1) > div > div.vp-inner-vontainer > div > div.vp-video__control-bar--video-subtitles > div > ul");
+        const controlBar = document.querySelector("#vjs_video_594 > div > section > div.vp-video__control-bar--setup > div:nth-child(1) > div > div.vp-inner-vontainer > div > div.vp-video__control-bar--video-subtitles > div > ul");
         if (controlBar) {
             const downloadButton = document.createElement('button');
             downloadButton.textContent = '下载字幕';
@@ -108,7 +108,7 @@
     observer.observe(document.body, config);
 
     setInterval(() => {
-        if (!document.querySelector("#vjs_video_594 > section > div.vp-video__control-bar--setup > div:nth-child(1) > div > div.vp-inner-vontainer > div > div.vp-video__control-bar--video-subtitles > div > ul > button")) {
+        if (!document.querySelector("#vjs_video_594 > div > section > div.vp-video__control-bar--setup > div:nth-child(1) > div > div.vp-inner-vontainer > div > div.vp-video__control-bar--video-subtitles > div > ul > button")) {
             addDownloadButton();
         }
     }, 1000);
